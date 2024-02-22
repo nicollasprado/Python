@@ -22,16 +22,16 @@ print("Q.4=", type(x), x)
 # Q.5
 x = 1+2*3+40/3%5-2+3//2*5
 print("Q.5=", type(x), x)
-# O resultado é 13.333... e é um numero real pois foi realizada uma divisão real
+# O resultado é 13.333... e é um numero real pois foi realizada uma divisão entre numeros inteiros que resultou em um valor quebrado
 
 # Q.6
-soma = 0
+contador = 0
 x = 0
 
-while soma < 10:
-    soma = soma+1
-    x = x+soma
-    if soma == 10:
+while contador < 10:
+    contador = contador+1
+    x = x+contador
+    if contador == 10:
         print("Q.6=", x)
         break
 # Resultado equivale a 55
@@ -54,20 +54,28 @@ media_final = (n1*peso1 + n2*peso2)/(peso1+peso2)
 print("Q.8=", media_final)
 # Resultado equivale a 7.0
 
-# Q.9 Em desenvolvimento!!
+# Q.9
 x = str(input("Digite um valor "))
-quantidade_digitos = len(x)
-contador = int(0)
-qtd_zeros = "1"
-print("QTD digitos=", quantidade_digitos)
-while contador < quantidade_digitos-1:
-    contador = contador+1
-    qtd_zeros = qtd_zeros+"0"
-    print(contador)
-    if contador == quantidade_digitos:
-        qtd_zeros_int = int(qtd_zeros)
-        x_int = int(x)
-        print("Dados:", x_int, qtd_zeros_int)
-        print("Resltado:", x_int/qtd_zeros_int)
+tamanho_valor = len(x)
+print('Q.9=', format(x[tamanho_valor-1]))
+
+# Q.10
+seg = 0
+
+while seg < 260:
+    seg = seg+1
+    if seg == 260:
+        min = seg/60
+        hor = min/60
+        print('Q10 Segundos:', seg)
+        print('Q10 Minutos:', min)
+        print('Q10 Horas:', hor)
         break
-        
+
+# Q.11
+x = str(input('Digite um valor de quatro digitos '))
+if len(x) == 4:
+    x_invertido = x[3], x[2], x[1], x[0]
+    print('Q11:', x_invertido)
+else:
+     print('ERRO: Este valor tem mais de quatro digitos')
