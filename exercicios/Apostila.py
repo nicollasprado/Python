@@ -33,7 +33,6 @@ while contador < 10:
     x = x+contador
     if contador == 10:
         print("Q.6=", x)
-        break
 # Resultado equivale a 55
 
 # Q.7
@@ -50,32 +49,47 @@ n1 = 5.2
 n2 = 8.2
 peso1 = 2
 peso2 = 3
-media_final = (n1*peso1 + n2*peso2)/(peso1+peso2)
+media_final = (n1 * peso1 + n2 * peso2) / (peso1 + peso2)
 print("Q.8=", media_final)
 # Resultado equivale a 7.0
 
 # Q.9
 x = str(input("Digite um valor "))
-tamanho_valor = len(x)
-print('Q.9=', format(x[tamanho_valor-1]))
+tamanho_x = len(x)
+zeros = ''
+for contador in range(tamanho_x-1): # Determinando a quantidade de zeros
+    zero = str(tamanho_x % tamanho_x)
+    zeros = zeros + zero
+divisor = str('1' + str(zeros))
+ultimo_digito = int(x) % int(divisor)
+print('Q.9=', ultimo_digito)
+
+# x = 73623
+# ultimo_digito = x % 10
+# print('ULTIMO DIGITO:', ultimo_digito)
 
 # Q.10
+tempoTOT = int(input('Digite um valor em segundos '))
 seg = 0
 
-while seg < 260:
+while seg < tempoTOT:
     seg = seg+1
-    if seg == 260:
-        min = seg/60
-        hor = min/60
+    if seg == tempoTOT:
+        m = seg/60
+        h = seg/3600
         print('Q10 Segundos:', seg)
-        print('Q10 Minutos:', min)
-        print('Q10 Horas:', hor)
-        break
+        print('Q10 Minutos:', m)
+        print('Q10 Horas:', h)
 
 # Q.11
-x = str(input('Digite um valor de quatro digitos '))
-if len(x) == 4:
-    x_invertido = x[3], x[2], x[1], x[0]
-    print('Q11:', x_invertido)
+x = str(input('Digite um número de 4 digitos '))
+qtd_digitos = len(x)
+if qtd_digitos != 4:
+    print('ERRO: O número não tem 4 digitos')
 else:
-     print('ERRO: Este valor tem mais de quatro digitos')
+ x_invertido = ''
+ for contador in range(qtd_digitos):
+    num_da_vez = x[contador]
+    num_final = int(num_da_vez) % 10
+    x_invertido = str(num_final) + x_invertido
+ print(int(x_invertido))
