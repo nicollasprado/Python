@@ -45,13 +45,10 @@ print("Q.7=", conta)
 # Resultado igual a 57
 
 # Q.8
-n1 = 5.2
-n2 = 8.2
-peso1 = 2
-peso2 = 3
-media_final = (n1 * peso1 + n2 * peso2) / (peso1 + peso2)
+nota1, nota2 = map(float, input('Digite duas notas divididas por espaços \n').split())
+peso1, peso2 = map(int, input('Digite os pesos das notas, respectivamente \n').split())
+media_final = (nota2 * peso1 + nota1 * peso2) / (peso1 + peso2)
 print("Q.8=", media_final)
-# Resultado equivale a 7.0
 
 # Q.9
 x = str(input("Digite um valor "))
