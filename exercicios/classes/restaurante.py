@@ -30,14 +30,17 @@ class Usuarios():
 
 lista_ids = []
 
-def RegistrarUsuario(primeiro_nome, ultimo_nome, idade):
+def gerarID():
     id = 0
     while len(str(id)) < 4:
         num1, num2, num3, num4 = map(int, str(random.randrange(1111, 8999, 1)))
         id = num1 * num2 * num3 * num4
     if lista_ids.count(id) == 0:
         lista_ids.append(id)
-    classe = Usuarios(primeiro_nome, ultimo_nome, idade, id)
+    return id
+
+def registrarUsuario(primeiro_nome, ultimo_nome, idade, id_usuario):
+    classe = Usuarios(primeiro_nome, ultimo_nome, idade, id_usuario)
     classe.usuario_saudacao()
     classe.usuario_descricao()
 
@@ -45,7 +48,7 @@ finalizar = False
 while finalizar == False:
     escolha = int(input('ESCOLHA UMA OPÇÃO \n 1- Registrar um usuário \n 2- finalizar o sistema \n'))
     if escolha == 1:
-        RegistrarUsuario(input('Digite o primeiro nome \n'), input('Digite o ultimo nome \n'), input('Digite a idade \n'))
+        registrarUsuario(input('Digite o primeiro nome \n'), input('Digite o ultimo nome \n'), input('Digite a idade \n'), gerarID())
     if escolha == 2:
         finalizar = True
     else:
