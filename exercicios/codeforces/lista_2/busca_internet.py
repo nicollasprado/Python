@@ -1,0 +1,1 @@
+# t = pessoas que ja haviam clicado no link
