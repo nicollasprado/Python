@@ -29,10 +29,12 @@ contador = 0
 x = 0
 
 while contador < 10:
-    contador = contador+1
-    x = x+contador
+    contador += 1
+    x += contador
     if contador == 10:
         print("Q.6=", x)
+# x = ((10+1)*10) / 2  => Progressão Aritmetica
+        
 # Resultado equivale a 55
 
 # Q.7
@@ -67,16 +69,12 @@ print('Q.9=', ultimo_digito)
 
 # Q.10
 tempoTOT = int(input('Digite um valor em segundos '))
-seg = 0
-
-while seg < tempoTOT:
-    seg = seg+1
-    if seg == tempoTOT:
-        m = seg/60
-        h = seg/3600
-        print('Q10 Segundos:', seg)
-        print('Q10 Minutos:', m)
-        print('Q10 Horas:', h)
+horas = tempoTOT // 3600
+minutos = (tempoTOT % 3600) // 60
+segundos = (tempoTOT % 3600) % 60
+print('Q10 Segundos:', segundos)
+print('Q10 Minutos:', minutos)
+print('Q10 Horas:', horas)
 
 # Q.11
 x = str(input('Digite um número de 4 digitos '))
