@@ -1,6 +1,6 @@
-def getTriangleType(stick1, stick2, stick3):
+def getTriangleType(sortedSticks: list):
     triangleType = ""
-    calculation = (stick1 ** 2) + (stick2 ** 2) - (stick3 ** 2)
+    calculation = (sortedSticks[0] ** 2) + (sortedSticks[1] ** 2) - (sortedSticks[2] ** 2)
     if (calculation > 0):
         # acutangulo
         triangleType = "a"
@@ -13,15 +13,15 @@ def getTriangleType(stick1, stick2, stick3):
     return triangleType
 
 def canFormTriangle(stick1, stick2, stick3):
-    if (stick1 + stick2 > stick3) and (stick1 + stick3 > stick2) and (stick2 + stick2 > stick1):
+    if (stick1 + stick2 > stick3) and (stick1 + stick3 > stick2) and (stick2 + stick3 > stick1):
         return True
 
 stick1, stick2, stick3 = map(int, input().split())
+sticks = [stick1, stick2, stick3]
+sortedSticks = sorted(sticks)
 
 boolCanForm = canFormTriangle(stick1, stick2, stick3)
 if (boolCanForm == True):
-    print(getTriangleType(stick1, stick2, stick3))
+    print(getTriangleType(sortedSticks))
 else:
     print("n")
-
-    # Arrumar
