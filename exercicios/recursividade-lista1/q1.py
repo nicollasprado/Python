@@ -11,5 +11,7 @@ def calcular_divisores(n, div):
         
 def conta_divisores(n):
     return calcular_divisores(n, n)
-    
+
+
+
 print(conta_divisores(7))

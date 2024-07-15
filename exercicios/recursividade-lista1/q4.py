@@ -9,6 +9,8 @@ def contadorAlgarismos(n, qtdAlg):
 def conta_algarismos(n):
     return contadorAlgarismos(n, 0)
 
+
+
 num = 1255312312931329
 print(conta_algarismos(num))
 

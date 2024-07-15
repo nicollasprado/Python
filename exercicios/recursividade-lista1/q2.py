@@ -22,4 +22,6 @@ def primo(n):
     divisores = calcularDivisores(n, n)
     return checarPrimo(divisores, n)
 
+
+
 print(primo(2))
