@@ -13,9 +13,11 @@ def calcularDivisores(n, div):
 
 def checarPrimo(divisores: list, n):
     if(divisores == [1, n]):
-        return f"primo: {divisores}"
+        return True
+        # return f"primo: {divisores}"
     else:
-        return f"Nao primo: {divisores}"
+        return False
+        # return f"Nao primo: {divisores}"
 
 
 def primo(n):
@@ -24,4 +26,4 @@ def primo(n):
 
 
 
-print(primo(2))
+# print(primo(2))
