@@ -1,7 +1,6 @@
 def realizarInversao(lista, index):
     if(index > len(lista)-1):
-        listaInvertida = []
-        return listaInvertida
+        return []
     else:
         inverter = realizarInversao(lista, index+1)
         inverter.append(lista[index])

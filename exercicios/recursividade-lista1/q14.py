@@ -1,7 +1,6 @@
 def inverterString(str, index):
     if(index > len(str)-1):
-        strInvertida = ""
-        return strInvertida
+        return ""
     else:
         adicionarLetrasInversao = inverterString(str, index+1)
         return adicionarLetrasInversao + str[index]
