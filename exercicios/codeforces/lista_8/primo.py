@@ -1,12 +1,14 @@
 def getPrimoMaior(num):
-    primo = False
-    testNumber = num+1
-    while(primo == False):
-        for num in range(testNumber-1, 1):
-            print(num)
-            if(testNumber % num == 0):
-                primo = True
-        testNumber += 1
+    divisor = 1
+    for testNum in range(num+1, 10000000):
+        if(testNum == divisor):
+            divisor += 1
+        elif(testNum % divisor == 0):
+            continue
+        elif(divisor == 10000000 and testNum % divisor != 0):
+            return testNum
+        else:
+            divisor += 1
 
 baseNum = int(input())
 print(getPrimoMaior(baseNum))

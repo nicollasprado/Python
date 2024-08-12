@@ -3,24 +3,18 @@ timeDecease, initialMass = map(int, input().split())
 mass = initialMass
 counterSeconds = 0
 
-while(mass > 0.5):
+while(mass >= 0.5):
     counterSeconds += timeDecease
     mass /= 2
 
-minutes = 0
-while(counterSeconds >= 60):
-    counterSeconds -= 60
-    minutes += 1
+minutes = counterSeconds // 60
+counterSeconds = counterSeconds % 60
 
-hours = 0
-while(minutes >= 60):
-    minutes -= 60
-    hours += 1
+hours = minutes // 60
+minutes = minutes % 60
 
-days = 0
-while(hours >= 24):
-    hours -= 24
-    days += 1
+days = hours // 24
+hours = hours % 24
 
 hours = '{:02d}'.format(hours)
 minutes = '{:02d}'.format(minutes)
