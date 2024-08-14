@@ -1,11 +1,16 @@
 def getPrimoMaior(num):
-    divisor = 1
-    for testNum in range(num+1, 10000000):
+    if(num < 3):
+        return num+1
+    divisor = 2
+    testNum = num+1
+    primo = False
+    while(primo == False):
         if(testNum == divisor):
-            divisor += 1
+            break
         elif(testNum % divisor == 0):
-            continue
-        elif(divisor == 10000000 and testNum % divisor != 0):
+            divisor = 2
+            testNum += 1
+        elif(divisor == num-1 and testNum % divisor != 0):
             return testNum
         else:
             divisor += 1
