@@ -18,6 +18,5 @@ hours = hours % 24
 
 hours = '{:02d}'.format(hours)
 minutes = '{:02d}'.format(minutes)
-counterSeconds = '{:02d}'.format(counterSeconds)
-totalTimeToDecease = f"{days} dias {hours}:{minutes}:{counterSeconds}"
+totalTimeToDecease = f"{days} dias {hours}:{minutes}:{counterSeconds:02d}"
 print(totalTimeToDecease)
