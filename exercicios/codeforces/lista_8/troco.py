@@ -2,9 +2,9 @@ def getQtTroco(balance, qtBrands, brandPrices: list):
     changes = []
     for brandPrice in brandPrices:
         if(brandPrice > balance):
-            changes.append(-1)
+            changes.append(0)
         changes.append(balance - ((balance // brandPrice) * brandPrice))
-    return sorted(changes)[-1]
+    return sorted(changes)[qtBrands-1]
 
 qtTests = int(input())
 
