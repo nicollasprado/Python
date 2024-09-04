@@ -12,7 +12,7 @@ measureAvg = measuresSum//qtMeasurements
 
 diffMeasureCounter = 0
 for measure in measurements:
-    if(abs(measureAvg - measure) >= measureAvg * 0.1):
+    if(measure > int(measureAvg * 1.1) or measure < int(measureAvg * 0.9)):
         diffMeasureCounter += 1
 
 print(measureAvg)
